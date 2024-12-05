@@ -1,4 +1,3 @@
-/* General Styles */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -30,19 +29,19 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/* Main Container (80/20 layout) */
+/* Main Container */
 .main-container {
   display: flex;
   width: 100%;
 }
 
 main {
-  flex: 1 1 80%; /* Main section takes 80% */
+  flex: 1 1 80%; /* Main section */
   padding: 2rem;
 }
 
 aside {
-  flex: 0 0 20%; /* Sidebar takes 20% */
+  flex: 0 0 20%; /* Sidebar */
   background-color: #f7f7f7;
   padding: 1rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -79,7 +78,7 @@ aside a:hover {
   display: block;
 }
 
-/* Hero Section */
+/* Hero */
 .hero {
   position: relative;
   text-align: center;
@@ -99,7 +98,7 @@ aside a:hover {
   text-shadow: 2px 2px 5px #000;
 }
 
-/* Product Section */
+/* Products */
 .product-list {
   display: flex;
   justify-content: space-around;
@@ -118,7 +117,7 @@ aside a:hover {
 
 .product img {
   width: 100%;
-  height: 300px; /* Fixed height for product images */
+  height: 300px; 
   object-fit: cover;
   margin-bottom: 1rem;
 }
@@ -140,7 +139,7 @@ button:active {
   background-color: #660000;
 }
 
-/* Checkout Section */
+/* Checkout */
 #checkout {
   background-color: #f7f7f7;
   border-radius: 10px;
@@ -201,7 +200,7 @@ button[type="submit"]:active {
   background-color: #660000;
 }
 
-/* Cart Icon Styles */
+/* Cart Icon */
 .cart-icon {
   position: fixed;
   top: 20px;
