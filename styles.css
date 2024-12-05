@@ -1,0 +1,240 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #800000;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0;
+  cursor: pointer;
+}
+
+nav a {
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Main Container (80/20 layout) */
+.main-container {
+  display: flex;
+  width: 100%;
+}
+
+main {
+  flex: 1 1 80%; /* Main section takes 80% */
+  padding: 2rem;
+}
+
+aside {
+  flex: 0 0 20%; /* Sidebar takes 20% */
+  background-color: #f7f7f7;
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+aside h3 {
+  margin-top: 0;
+}
+
+aside ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+aside li {
+  margin-bottom: 1rem;
+}
+
+aside a {
+  text-decoration: none;
+  color: #800000;
+}
+
+aside a:hover {
+  text-decoration: underline;
+}
+
+/* Sections */
+.section {
+  display: none;
+}
+
+.section.active {
+  display: block;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.hero img {
+  width: 57%;
+  height: auto;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-shadow: 2px 2px 5px #000;
+}
+
+/* Product Section */
+.product-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.product {
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  padding: 1rem;
+  width: 45%;
+  text-align: center;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product img {
+  width: 100%;
+  height: 300px; /* Fixed height for product images */
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+button {
+  background-color: #800000;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #b30000;
+}
+
+button:active {
+  background-color: #660000;
+}
+
+/* Checkout Section */
+#checkout {
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin: 2rem auto;
+}
+
+#checkout h2 {
+  text-align: center;
+  color: #800000;
+  margin-bottom: 1.5rem;
+}
+
+/* Form Styles */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+label {
+  font-size: 1rem;
+  color: #333;
+}
+
+input {
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+input:focus {
+  border-color: #800000;
+  outline: none;
+}
+
+button[type="submit"] {
+  background-color: #800000;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #b30000;
+}
+
+button[type="submit"]:active {
+  background-color: #660000;
+}
+
+/* Cart Icon Styles */
+.cart-icon {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-size: 2rem;
+  color: #ff6347;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.cart-icon:hover {
+  color: #ff4500;
+}
+
+@media (max-width: 600px) {
+  .product {
+    width: 100%;
+  }
+
+  button[type="submit"] {
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  .hero img {
+    width: 100%;
+  }
+
+  .main-container {
+    flex-direction: column;
+  }
+
+  aside {
+    display: none;
+  }
+}
